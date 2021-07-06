@@ -1,4 +1,4 @@
-package chapter_5_singleton;
+package chapter5_singleton;
 
 public class Singleton {
     // Another method to singleton thread safe os that we initialize it on the class initialization.
