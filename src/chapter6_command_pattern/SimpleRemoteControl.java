@@ -1,2 +1,12 @@
-package chapter6_command_pattern;public class SimpleRemoteControl {
+package chapter6_command_pattern;
+
+public class SimpleRemoteControl {
+    Command slot;
+    public void setCommand(Command command){
+        slot = command;
+    }
+
+    public void buttonWasPressed(){
+        slot.execute();
+    }
 }
