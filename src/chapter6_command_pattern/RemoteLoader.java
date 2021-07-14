@@ -21,12 +21,12 @@ public class RemoteLoader {
 
         StereoOnWithCDCommand stereoOnWithCDCommand = new StereoOnWithCDCommand(stereo);
 
-        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-        remoteControl.setCommand(2, garageDoorUp, garageDoorUp);
-        remoteControl.setCommand(3, stereoOnWithCDCommand, stereoOnWithCDCommand);
+//        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+//        remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
+//        remoteControl.setCommand(2, garageDoorUp, garageDoorUp);
+//        remoteControl.setCommand(3, stereoOnWithCDCommand, stereoOnWithCDCommand);
 
-        System.out.println(remoteControl);
+
 //
 //        remoteControl.onButtonWasPushed(0);
 //        remoteControl.onButtonWasPushed(1);
@@ -35,16 +35,30 @@ public class RemoteLoader {
 //        remoteControl.onButtonWasPushed(2);
 //        remoteControl.onButtonWasPushed(3);
 
+//
+//        remoteControl.onButtonWasPushed(0);
+//        remoteControl.offButtonWasPushed(0);
+//        System.out.println(remoteControl);
+//        remoteControl.undoButtonWasPushed();
+//        remoteControl.onButtonWasPushed(0);
+//        System.out.println(remoteControl);
+//        remoteControl.offButtonWasPushed(0);
+//        System.out.println(remoteControl);
+//        remoteControl.undoButtonWasPushed();
+
+        CeilingFan ceilingFan = new CeilingFan("Living Room");
+
+        CeilingFanHighCommand ceilingFanHighCommand = new CeilingFanHighCommand(ceilingFan);
+        CeilingFanMediumCommand ceilingFanMediumCommand = new CeilingFanMediumCommand(ceilingFan);
+
+        remoteControl.setCommand(0,ceilingFanHighCommand, ceilingFanMediumCommand);
 
         remoteControl.onButtonWasPushed(0);
         remoteControl.offButtonWasPushed(0);
-        System.out.println(remoteControl);
+
         remoteControl.undoButtonWasPushed();
-        remoteControl.onButtonWasPushed(0);
+
         System.out.println(remoteControl);
-        remoteControl.offButtonWasPushed(0);
-        System.out.println(remoteControl);
-        remoteControl.undoButtonWasPushed();
 
 
     }
