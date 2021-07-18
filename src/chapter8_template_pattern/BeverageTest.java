@@ -7,5 +7,8 @@ public class BeverageTest {
 
         Coffee coffee = new Coffee();
         coffee.prepareRecipe();
+
+        CoffeeWithHook coffeeWithHook = new CoffeeWithHook();
+        coffeeWithHook.prepareRecipe();
     }
 }
