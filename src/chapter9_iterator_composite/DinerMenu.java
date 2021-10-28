@@ -7,7 +7,6 @@ public class DinerMenu {
 
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
-
         addItem("some menu item from Diner", "description", true, 2.99);
     }
 
@@ -21,7 +20,11 @@ public class DinerMenu {
         }
     }
 
-    public MenuItem[] getMenuItems(){
-        return menuItems;
+    public Iterator createIterator(){
+        return new DinerMenuIterator(menuItems);
     }
+
+//    public MenuItem[] getMenuItems(){
+//        return menuItems;
+//    }
 }
